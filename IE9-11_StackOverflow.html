@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stack overflow</title>
+<meta http-equiv="Cache-Control" content="no-cache"/>	
+<script type='text/javascript'>
+    function crash() {
+        var styleSheet1=document.createElement('link');
+        document.body.appendChild(styleSheet1);
+
+        var dl=document.createElement("DL");
+        styleSheet1.appendChild(dl);
+
+        var embed=document.createElement("EMBED");
+        dl.appendChild(embed);
+        
+        var range2=document.body.createTextRange();
+        range2.select();
+        range2.execCommand("insertOrderedList",true,null);
+    }
+</script>	
+</head>
+<body onload="crash();">
+</body>
+</html>
