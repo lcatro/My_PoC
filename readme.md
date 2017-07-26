@@ -10,47 +10,22 @@
 
 ### CVE List
 
-CVE-2017-10000381    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000381 <br/>
+CVE-2017-10000381 <br/>
 
-CVE-2017-10794    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-10794 <br/>
+CVE-2017-10794 <br/>
 
-CVE-2017-10799    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-10799 <br/>
-CVE-2017-10800    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-10800 <br/>
+CVE-2017-10799 CVE-2017-10800 <br/>
 
-CVE-2017-10802    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-10802 <br/>
+CVE-2017-10802 <br/>
 
-CVE-2017-10976    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-10976 <br/>
+CVE-2017-10976 <br/>
 
-CVE-2017-11096    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11096 <br/>
-CVE-2017-11097    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11097 <br/>
-CVE-2017-11098    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11098 <br/>
-CVE-2017-11099    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11099 <br/>
-CVE-2017-11100    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11100 <br/>
-CVE-2017-11101    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11101 <br/>
-CVE-2017-11102    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11102 <br/>
+CVE-2017-11096 CVE-2017-11097 CVE-2017-11098 CVE-2017-11099 CVE-2017-11100 CVE-2017-11101 CVE-2017-11102 <br/>
 
-CVE-2017-11139    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11139 <br/>
-CVE-2017-11140    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11140 <br/>
+CVE-2017-11139 CVE-2017-11140 <br/>
 
-CVE-2017-11531    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11531 <br/>
-CVE-2017-11532    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11532 <br/>
-CVE-2017-11533    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11533 <br/>
-CVE-2017-11534    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11534 <br/>
-CVE-2017-11535    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11535 <br/>
-CVE-2017-11536    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11536 <br/>
-CVE-2017-11537    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11537 <br/>
-CVE-2017-11538    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11538 <br/>
-CVE-2017-11539    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11539 <br/>
-CVE-2017-11540    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11540 <br/>
+CVE-2017-11531 CVE-2017-11532 CVE-2017-11533 CVE-2017-11534 CVE-2017-11535 CVE-2017-11536 CVE-2017-11537 CVE-2017-11538 CVE-2017-11539 CVE-2017-11540 <br/>
 
-CVE-2017-11522    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11522 <br/>
+CVE-2017-11522 <br/>
 
-CVE-2017-11636    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11636 <br/>
-CVE-2017-11637    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11637 <br/>
-CVE-2017-11638    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11638 <br/>
-CVE-2017-11639    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11639 <br/>
-CVE-2017-11640    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11640 <br/>
-CVE-2017-11641    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11641 <br/>
-CVE-2017-11642    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11642 <br/>
-CVE-2017-11643    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11643 <br/>
-CVE-2017-11644    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11644 <br/>
+CVE-2017-11636 CVE-2017-11637 CVE-2017-11638 CVE-2017-11639 CVE-2017-11640 CVE-2017-11641 CVE-2017-11642 CVE-2017-11643 CVE-2017-11644 <br/>
